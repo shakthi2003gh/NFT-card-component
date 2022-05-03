@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+*,
+*::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* color palette */
+:root {
+  --color-primary: hsl(215, 51%, 70%);
+  --color-secondary: hsl(178, 100%, 50%);
+  --color-accent: hsla(215, 30%, 58%, 0.721);
+  --color-main-bg: hsl(217, 54%, 11%);
+  --color-card-bg: hsl(216, 50%, 16%);
+  --color-line: hsl(215, 32%, 27%);
+}
+
+/* typography */
+body {
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--color-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 1.7rem;
+}
+
+/* NFT card */
+.card-block {
+  background-color: var(--color-card-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 335px;
+  box-shadow: 0 0 50px -20px black;
+}
+
+/* NFT content block */
+.card__NFT-content {
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 1.5rem;
+}
+
+.NFT-content__image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.NFT-content__image:hover {
+  background-color: hsla(178, 100%, 50%, 0.204);
+  content: url(/images/icon-view.svg);
+  cursor: pointer;
+}
+
+.NFT-content__title {
+  margin-top: 2rem;
+  color: white;
+}
+
+.NFT-content__title:hover {
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.NFT-content__description {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+.NFT-content__values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.content-value--primary {
+  color: var(--color-secondary);
+}
+
+.content-value--secondary {
+  color: var(--color-accent);
+}
+
+.content-value--primary::before {
+  content: url(/images/icon-ethereum.svg);
+  margin-right: 0.5rem;
+}
+
+.content-value--secondary::before {
+  content: url(/images/icon-clock.svg);
+  margin-right: 0.5rem;
+}
+
+/* NFT creator profile block */
+.card__NFT-creator {
+  display: flex;
+  margin-top: 1.8rem;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.NFT-creator__image {
+  aspect-ratio: 1/1;
+  height: 3.5rem;
+  border: 1px solid white;
+  border-radius: 30px;
+}
+
+.NFT-creator__name {
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.NFT-creator__name::after {
+  display: inline-block;
+  content: "Jules Wyvern";
+  margin-left: 0.5ch;
+  color: white;
+  font-weight: 400;
+}
+
+.NFT-creator__name:hover::after {
+  color: var(--color-secondary);
+  cursor: pointer;
+}
